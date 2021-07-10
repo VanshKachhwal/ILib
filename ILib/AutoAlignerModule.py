@@ -1,7 +1,7 @@
 import os
 import cv2 as cv
 import mediapipe as mp
-from utils import makeFolder, collect_image_files
+from ILib.utils import makeFolder, collect_image_files
 
 class AutoAligner():
 

@@ -2,7 +2,7 @@ import os
 import cv2 as cv
 import mediapipe as mp
 import numpy as np
-from utils import makeFolder, collect_image_files
+from ILib.utils import makeFolder, collect_image_files
 
 class SelfiSegmentation():
 
