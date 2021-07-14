@@ -46,16 +46,14 @@ def remove_background(input_file, output_file, background_img = (255,255,255), m
     """
     
     images = collect_image_files(input_file)
-    makeFolder(output_file)
+    # makeFolder(output_file)
 
     segmentor = SelfiSegmentation(model)
     
-    cwd = os.getcwd()
-    path = cwd + "\\" + output_file
-
+    path = output_file
     for idx, file in enumerate(images):
         
-        img = cv.imread(cwd + '/' + input_file + "/" + file)
+        img = cv.imread(input_file + "\\" + file)
         filename, file_ext = os.path.splitext(images[idx])
         imgOut = segmentor.removeBG(img,background_img,threshold)
         

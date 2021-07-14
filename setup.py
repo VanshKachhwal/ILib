@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'ILib',         
   packages = ['ILib'],   
-  version = '0.1',     
+  version = '0.3',     
   description = 'Image processing library using opencv and mediapipe',  
   author = 'Vansh Kachhwal',                   
   author_email = 'kachhwalvansh230@gmail.com',      

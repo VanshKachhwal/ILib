@@ -81,7 +81,7 @@ def make_collage(input_file, filename, width, init_height):
     """
 
     :param input_file: file containing images
-    :param filename: filename with extension for the output collage
+    :param filename: filename + extension for the output collage
     :param width: width
     :param init_height: height
     """

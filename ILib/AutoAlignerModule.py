@@ -15,7 +15,6 @@ class AutoAligner():
 
     def align_image(self, img, min_face_detection_confidence = 0.5, min_pose_detection_confidence = 0.5):
         """
-
         :param img: image to align
         :param min_face_detection_confidence: confidence for face detection in the image
         :param min_pose_detection_confidence: confidence for pose detection in the image
@@ -61,7 +60,6 @@ class AutoAligner():
 
 def auto_align(input_file, output_file, min_face_detection_confidence = 0.5, min_pose_detection_confidence = 0.5):
     """
-
     :param input_file: file containing images
     :param output_file: file to store aligned images
     :param min_face_detection_confidence: confidence for face detection in the image
@@ -69,10 +67,9 @@ def auto_align(input_file, output_file, min_face_detection_confidence = 0.5, min
     
     """
     images = collect_image_files(input_file)
-    makeFolder(output_file)
+    # makeFolder(output_file)
 
-    cwd = os.getcwd()
-    path = cwd + "\\" + output_file
+    path = output_file
 
     mp_drawing = mp.solutions.drawing_utils
     mp_pose = mp.solutions.pose
@@ -82,7 +79,7 @@ def auto_align(input_file, output_file, min_face_detection_confidence = 0.5, min
 
         for idx, file in enumerate(images):
             
-            image = cv.imread(cwd + '/' + input_file + "/" + file)
+            image = cv.imread(input_file + "\\" + file)
             filename, file_ext = os.path.splitext(images[idx])
             image_height, image_width, _ = image.shape
             
@@ -134,4 +131,3 @@ def auto_align(input_file, output_file, min_face_detection_confidence = 0.5, min
                 cv.imwrite(path + '\\' + filename + file_ext, image)
             except:
                 cv.imwrite(path + '\\' + filename + ".png", image)
-
