@@ -46,6 +46,8 @@ class PoseDetector():
     def findPosition(self, img, draw=True, bboxWithHands=False):
         self.lmList = []
         self.bboxInfo = {}
+        imgRGB = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+        self.results = self.pose.process(imgRGB)
         if self.results.pose_landmarks:
             for id, lm in enumerate(self.results.pose_landmarks.landmark):
                 h, w, c = img.shape
