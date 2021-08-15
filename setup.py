@@ -7,7 +7,7 @@ setup(
   author = 'Vansh Kachhwal',                   
   author_email = 'kachhwalvansh230@gmail.com',      
   url = 'https://github.com/VanshKachhwal',   
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    
+  download_url = 'https://github.com/VanshKachhwal/ILib/archive/refs/tags/0.3.tar.gz',    
   keywords = ['PoseDetector', 'AutoAligner', 'BackgroundRemover', 'MosaicMaker', 'CollageMaker'],   # Keywords that define your package best
   install_requires=[            
           'opencv-contrib-python',
